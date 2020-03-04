@@ -1,0 +1,64 @@
+$font-bungee: 'Bungee';
+
+$blueLight: rgb(204, 235, 255);
+$greenLight: rgb(204, 255, 230);
+
+.cc {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.btn-container {
+    padding: 2%;
+    .btn {
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+#header {
+    @extend .cc;
+    width: 100%;
+    height: 25vh;
+    text-align: center;
+    background: linear-gradient($blueLight, transparent);
+    h1 {
+        @extend .cc;
+        margin: auto;
+        font-family: $font-bungee;
+    }
+}
+
+#display {
+    width: 100%;
+    #searchForm {
+        width: 50%;
+        margin: auto;
+    }
+
+    #chart {
+        padding: 5% 0;
+        .chartLabel {
+            font-size: calc(.7em + .2vw);
+        }
+        #yLabel {
+            margin: auto;
+            transform: rotate(-90deg);
+            min-width: 150px;
+            text-align: center;
+        }
+    }
+}
+
+footer {
+    padding: 3% 0 1% 0;
+    background: linear-gradient(transparent, $greenLight);
+    text-align: center;
+    i {
+        padding: 1%;
+        font-size: 1.3em !important;
+        color: black;
+    }
+}
